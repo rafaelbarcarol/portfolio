@@ -1,0 +1,104 @@
+@use "../base/variables.scss";
+
+.about {
+  height: 100vh;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(15, 76, 117);
+  background: linear-gradient(
+    0deg,
+    rgba(15, 76, 117, 1) 0%,
+    rgba(27, 38, 44, 1) 100%
+  );
+
+  &__wrapper {
+    display: flex;
+    height: 75%;
+    border-radius: 5rem;
+    border: 2px solid $quaternary-color;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 3rem;
+    max-width: 33.3vw;
+    align-items: center;
+    transition: 0.5s all ease;
+
+    &:nth-child(2) {
+      padding: 0;
+    }
+
+    &.inactive {
+      filter: blur(10px);
+    }
+  }
+
+  &__title {
+    height: 10rem;
+    font-size: 5rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  &__description {
+    font-size: 2rem;
+  }
+
+  &__image {
+    max-height: 50%;
+    clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
+
+    &:last-child {
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+    }
+  }
+}
+
+@media screen and (max-width: 1367px) {
+  .about {
+    &__title {
+      font-size: 4rem;
+    }
+    &__description {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+@media screen and (max-width: 911px) {
+  .about {
+    height: auto;
+    padding: 3rem;
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__column {
+      max-width: fit-content;
+      padding: 2rem;
+
+      &:nth-child(2) {
+        margin: 0 auto;
+      }
+      &.inactive {
+        filter: blur(0);
+      }
+    }
+    &__title {
+      height: auto;
+    }
+    &__description {
+      max-width: 75vw;
+    }
+
+    &__image {
+      max-height: 15rem;
+    }
+  }
+}

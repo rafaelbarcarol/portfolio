@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rafael Barcarol - Dev</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <ul class="header__list">
+          <li class="header__item">
+              <a href="#banner" class="header__link">Início</a>
+          </li>
+          <li class="header__item">
+              <a href="#about" class="header__link">Sobre Mim</a>
+          </li>
+          <li class="header__item">
+              <a href="#technologies" class="header__link">Tecnologias e Projetos</a>
+          </li>
+      </ul>
+  </header>
+  <header class="mobile-header">
+      <div class="mobile-header__layer js-mobile-menu-layer"></div>
+      <div class="mobile-header__toggle js-toggle-mobile-menu">
+          <p>&#8801</p>
+      </div>
+      <div class="mobile-header__menu js-mobile-menu">
+          <ul class="mobile-header__list">
+              <li class="mobile-header__item">
+                  <a href="#banner" class="mobile-header__link js-mobile-menu-link">Início</a>
+              </li>
+              <li class="mobile-header__item">
+                  <a href="#about" class="mobile-header__link js-mobile-menu-link">Sobre Mim</a>
+              </li>
+              <li class="mobile-header__item">
+                  <a href="#technologies" class="mobile-header__link js-mobile-menu-link">Tecnologias e Projetos</a>
+              </li>
+          </ul>
+      </div>
+  </header>
+  
+    <main class="home">
+      <div class="banner" id="banner">
+        <div class="banner__content">
+            <div class="banner__about">
+                <div class="banner__name">Rafael Barcarol</div>
+                <div class="banner__role">Desenvolvedor de Software</div>
+            </div>
+            <div class="banner__profile">
+                <img src="images/profile-1.jpg" alt="Fotografia de Rafael Barcarol">
+            </div>
+        </div>
+        <div class="banner__social">
+            <a class="banner__link" href="https://br.linkedin.com/in/rafael-barcarol" target="_blank"
+                rel="noopener noreferrer">
+                <img src="images/linkedin-logo.png" alt="Ir para o perfil de Rafael no Linkedin">
+            </a>
+            <a class="banner__link" href="https://github.com/rafaelbarcarol" target="_blank" rel="noopener noreferrer">
+                <img src="images/github-logo.png" alt="Ir para o perfil de Rafael no GitHub">
+            </a>
+        </div>
+        <div class="banner__background">
+            <video autoplay loop muted src="images/background-video.mp4"></video>
+        </div>
+    </div>
+    <section class="about" id="about">
+      <div class="about__wrapper js-about-wrapper">
+          <div class="about__column js-about-column">
+              <p class="about__title">Sobre Mim</p>
+              <p class="about__description">Meu nome é Rafael M. Barcarol, tenho 27 anos e sou Desenvolvedor de Software.
+                  <br><br>
+                  Atuo como Assistente de TI em uma empresa de Desenvolvimento de Software.
+                  <br><br>
+                  Uma curiosidade sobre mim é que realizei uma transição de carreira da área da Saúde para a área da
+                  Tecnologia no ano de 2023.
+              </p>
+          </div>
+          <div class="about__column">
+              <img src="images/coding.jpg" alt="Imagem de um computador" class="about__image">
+              <img src="images/coding-2.jpg" alt="Imagem de outro computador" class="about__image">
+          </div>
+          <div class="about__column js-about-column">
+              <p class="about__title">Experiência</p>
+              <p class="about__description">Iniciei o curso de Análise e Desenvolvimento de Sistemas no ano de 2023, com
+                  previsão de conclusão
+                  no ano de 2025.
+                  <br><br>
+                  Iniciei como estagiário em setembro de 2023 e fui efetivado como Assistende TI em março de 2024.
+                  <br><br>
+                  Na minha rotina de trabalho atuo com Front-End
+                  e Back-End na construção e
+                  manutenção de websites modernos.
+              </p>
+          </div>
+      </div>
+  </section>
+  <div class="technologies" id="technologies">
+    <div class="technologies__wrapper">
+        <div class="technologies__title technologies__title--before">Tecnologias</div>
+        <div class="technologies__cards">
+            <div class="technologies__card">
+                <p class="technologies__name technologies__name--html">HTML</p>
+            </div>
+            <div class="technologies__card">
+                <p class="technologies__name technologies__name--css">CSS</p>
+            </div>
+            <div class="technologies__card">
+                <p class="technologies__name technologies__name--sass">Sass</p>
+            </div>
+            <div class="technologies__card">
+                <p class="technologies__name technologies__name--javascript">JavaScript</p>
+            </div>
+            <div class="technologies__card">
+                <p class="technologies__name technologies__name--jquery">jQuery</p>
+            </div>
+            <div class="technologies__card">
+                <p class="technologies__name technologies__name--php">PHP</p>
+            </div>
+            <div class="technologies__card">
+                <p class="technologies__name technologies__name--laravel">Laravel</p>
+            </div>
+            <div class="technologies__card">
+                <p class="technologies__name technologies__name--git">Git</p>
+            </div>
+        </div>
+    </div>
+    <div class="technologies__wrapper">
+        <div class="technologies__title">Projetos</div>
+        <div class="technologies__carousel slider-technologies-carousel">
+            <div class="technologies__slide">
+                <img src="images/signUpForm.png" alt="Print de um projeto de estudo sobre validações em formulários">
+                <div class="technologies__access">
+                    <a href="/">Acessar Projeto</a>
+                    <a href="/">Acessar Código</a>
+                </div>
+            </div>
+            <div class="technologies__slide">
+                <img src="images/groceryList.png" alt="Print de um projeto de estudo de uma lista de mercado">
+                <div class="technologies__access">
+                    <a href="/">Acessar Projeto</a>
+                    <a href="/">Acessar Código</a>
+                </div>
+            </div>
+            <div class="technologies__slide">
+                <img src="images/ebookSoccerLP.png" alt="Print de um projeto de estudo de uma landing page sobre futebol">
+                <div class="technologies__access">
+                    <a href="/">Acessar Projeto</a>
+                    <a href="/">Acessar Código</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-techonologies-carousel-prev slick-prev">←</div>
+        <div class="slider-technologies-carousel-next slick-next">→</div>
+        <div class="slider-pagination" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</div>
+
+    </main>
+    <footer class="footer"></footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

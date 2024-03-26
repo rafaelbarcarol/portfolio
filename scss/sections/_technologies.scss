@@ -1,0 +1,283 @@
+@use "../base/variables.scss";
+
+.technologies {
+    max-height: 90vh;
+    background: rgb(27, 38, 44);
+    background: linear-gradient(
+        0deg,
+        rgba(27, 38, 44, 1) 0%,
+        rgba(15, 76, 117, 1) 100%
+    );
+    position: relative;
+    padding: 5rem;
+    overflow: hidden;
+    display: flex;
+
+    &__wrapper {
+        height: 100%;
+        position: relative;
+
+        &:first-child {
+            width: 40%;
+        }
+
+        &:last-child {
+            width: 60%;
+        }
+
+        .slick-prev,
+        .slick-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            font-size: 7rem;
+            color: $primary-color;
+            cursor: pointer;
+        }
+
+        .slick-prev {
+            left: 1rem;
+        }
+
+        .slick-next {
+            right: 1rem;
+        }
+
+        .slick-disabled {
+            opacity: 0.5;
+        }
+
+        .slider-pagination {
+            width: 100%;
+            margin: 1.75rem auto;
+            height: 0.75rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            background-color: $quaternary-color;
+            background-image: linear-gradient(
+                to right,
+                $tertiary-color,
+                $tertiary-color
+            );
+            background-repeat: no-repeat;
+            background-size: 33.33% 100%;
+            transition: background-size 0.5s ease-in-out;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+                rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+    }
+
+    &__title {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 5rem;
+        position: relative;
+        padding: 1rem 0 4rem 0;
+
+        &--before {
+            &::before {
+                position: absolute;
+                left: -1rem;
+                top: 1rem;
+                height: 100%;
+                width: 0.1rem;
+                background: $quaternary-color;
+                content: "";
+            }
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        padding-left: 3rem;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            left: -1rem;
+            top: 0;
+            height: 150%;
+            width: 0.1rem;
+            background: $quaternary-color;
+            content: "";
+        }
+    }
+
+    &__card {
+        display: flex;
+        justify-content: start;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            left: -4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 0.1rem;
+            width: 12rem;
+            content: "";
+            background: $quaternary-color;
+        }
+    }
+
+    &__name {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.5rem;
+        margin: 1rem 0 1rem 8rem;
+        position: relative;
+        transition: 0.5s all ease;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        cursor: default;
+        &:after {
+            position: absolute;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            content: "";
+            top: 50%;
+            transform: translateY(-50%);
+            right: -2rem;
+        }
+
+        &--html {
+            &:hover {
+                background: #e44d26;
+            }
+        }
+
+        &--css {
+            &:hover {
+                background: #264de4;
+            }
+        }
+
+        &--sass {
+            &:hover {
+                background: #cc6699;
+            }
+        }
+
+        &--javascript {
+            &:hover {
+                background: #f7df1e;
+            }
+        }
+
+        &--jquery {
+            &:hover {
+                background: #0769ad;
+            }
+        }
+
+        &--php {
+            &:hover {
+                background: #4f5d95;
+            }
+        }
+
+        &--laravel {
+            &:hover {
+                background: #ff2d20;
+            }
+        }
+
+        &--git {
+            &:hover {
+                background: #ff6c37;
+            }
+        }
+    }
+
+    &__carousel {
+        height: 100%;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+            rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+
+    .slick {
+        &-list,
+        &-track,
+        &-slide {
+            height: 90%;
+            border-radius: 1rem;
+        }
+    }
+
+    .slick-slide {
+        background: lightblue;
+        font-size: 5rem;
+        border-radius: 5rem;
+        height: 65vh;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+    }
+
+    &__slide {
+        position: relative;
+
+        &:hover {
+            .technologies__access {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+    }
+
+    &__access {
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        gap: 1.5rem;
+        flex-direction: column;
+        left: 1.5rem;
+        bottom: 3rem;
+        transition: 0.5s all ease;
+        a {
+            text-decoration: none;
+            padding: 1rem;
+            color: $secondary-color;
+            font-size: 2rem;
+            background: $quaternary-color;
+            border-radius: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 911px) {
+    .technologies {
+        max-height: none;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+
+        &__cards {
+            &::before {
+                height: 94%;
+            }
+        }
+
+        &__wrapper {
+            &:last-child {
+                width: 100%;
+            }
+
+            .slick-prev,
+            .slick-next {
+                font-size: 4rem;
+            }
+        }
+    }
+}

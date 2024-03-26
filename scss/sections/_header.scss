@@ -1,0 +1,136 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 70%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+  }
+
+  &__item {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -0.2rem;
+      left: 0;
+      width: 0;
+      height: 0.1rem;
+      background: $quaternary-color;
+      transition: width 0.5s ease;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+.mobile-header {
+  display: none;
+}
+
+@media screen and (max-width: 911px) {
+  .header {
+    display: none;
+  }
+
+  .mobile-header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    &__toggle {
+      background: $tertiary-color;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 3;
+
+      p {
+        font-size: 3rem;
+      }
+    }
+
+    &__menu {
+      position: fixed;
+      height: 100vh;
+      width: 50vw;
+      background: $primary-color;
+      transform: translateX(-50rem);
+      pointer-events: none;
+      transition: 0.5s all ease;
+      z-index: 3;
+
+      &.active {
+        transform: translateX(0);
+        pointer-events: all;
+      }
+    }
+
+    &__list {
+      height: 90%;
+      padding: 0 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      list-style: none;
+    }
+
+    &__link {
+      font-size: 2rem;
+      text-decoration: none;
+      color: $quaternary-color;
+    }
+
+    &__layer {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      background: #000;
+      opacity: 0;
+      transition: 0.5s all ease;
+      pointer-events: none;
+      z-index: 2;
+
+      &.active {
+        opacity: 0.5;
+        pointer-events: all;
+      }
+    }
+  }
+}

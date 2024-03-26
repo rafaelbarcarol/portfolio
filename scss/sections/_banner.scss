@@ -1,0 +1,160 @@
+@use "../base/variables.scss";
+
+.banner {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  &__content {
+    display: flex;
+    align-items: center;
+    margin-left: 6.5rem;
+    height: 100vh;
+  }
+  &__about {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -1.5rem;
+      height: 100%;
+      width: 0.1rem;
+      background: $tertiary-color;
+      content: "";
+    }
+  }
+  &__name {
+    font-size: 8rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 80%;
+  }
+  &__role {
+    font-size: 3.5rem;
+    width: 49rem;
+    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15rem solid;
+    font-family: monospace;
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+  }
+  &__profile {
+    position: absolute;
+    top: 50%;
+    right: 5rem;
+    transform: translateY(-50%);
+    overflow: hidden;
+
+    img {
+      height: 40rem;
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+      transition: 1s all ease;
+
+      &:hover {
+        clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 25% 100%);
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    position: absolute;
+    bottom: 3rem;
+    left: 5rem;
+    gap: 1rem;
+  }
+  &__link {
+    img {
+      height: 6rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.5s all ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(0.3);
+    }
+  }
+}
+
+@media screen and (max-width: 911px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__profile {
+      inset: 0;
+      transform: none;
+      img {
+        border-radius: 50%;
+        clip-path: none;
+        height: 20rem;
+
+        &:hover {
+          clip-path: none;
+        }
+      }
+    }
+    &__content {
+      margin: 0;
+      gap: 5rem;
+      flex-direction: column-reverse;
+      height: auto;
+    }
+    &__about {
+      min-width: 28rem;
+      max-width: 28rem;
+    }
+    &__name {
+      font-size: 3.5rem;
+    }
+    &__role {
+      font-size: 2rem;
+      width: 28rem;
+    }
+    &__profile {
+      position: relative;
+    }
+    &__social {
+      bottom: 2rem;
+      left: 2rem;
+    }
+    &__link {
+      img {
+        height: 4rem;
+      }
+    }
+  }
+}
