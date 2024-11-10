@@ -1,0 +1,100 @@
+@use "variables" as *;
+
+.courses,
+.training {
+  display: flex;
+  padding: 5rem 5vw;
+  &__sticky {
+    position: sticky;
+    top: 5rem;
+    height: fit-content;
+    flex: 1;
+    font-size: 4rem;
+    top: 40%;
+
+    &__title {
+      position: relative;
+      width: fit-content;
+
+      &:after {
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        background: $color-light-green;
+        height: 0.5rem;
+        width: 100%;
+        content: "";
+      }
+
+      &:before {
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        background: $color-dark-green;
+        height: 0.5rem;
+        width: 1rem;
+        z-index: 2;
+        content: "";
+        animation: moveSquare 10s infinite;
+      }
+
+      @keyframes moveSquare {
+        0% {
+          left: 0;
+        }
+        50% {
+          left: calc(100% - 1rem);
+        }
+        100% {
+          left: 0;
+        }
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    flex: 1;
+
+    &__item {
+      font-size: 2rem;
+      color: $color-light-gray;
+      background: $color-dark-gray;
+      padding: 3rem;
+      border-radius: 5rem;
+      width: fit-content;
+
+      &:nth-child(odd) {
+        background: $color-dark-green;
+        color: $color-light-gray;
+      }
+    }
+  }
+}
+
+.courses {
+  flex-direction: row-reverse;
+
+  &__sticky {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 910px) {
+  .training,
+  .courses {
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+
+    &__sticky {
+      position: relative;
+      top: unset;
+      &__title {
+        font-size: 4rem;
+      }
+    }
+  }
+}

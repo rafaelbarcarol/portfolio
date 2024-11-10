@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.js"
+      integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="header js-desktop-header">
+      <div class="mobile-header">
+        <div class="mobile-header-menu js-mobile-header-menu inactive">
+          <ul class="mobile-menu-list">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              class="js-close-hamburguer"
+            >
+              <line
+                x1="10"
+                y1="10"
+                x2="30"
+                y2="30"
+                stroke="#f1f1f1"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <line
+                x1="30"
+                y1="10"
+                x2="10"
+                y2="30"
+                stroke="#f1f1f1"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <li class="mobile-menu-item js-mobile-menu-item">
+              <a href="#banner">Início</a>
+            </li>
+            <li class="mobile-menu-item js-mobile-menu-item">
+              <a href="#about">Sobre</a>
+            </li>
+            <li class="mobile-menu-item js-mobile-menu-item">
+              <a href="#experience">Experiência</a>
+            </li>
+            <li class="mobile-menu-item js-mobile-menu-item">
+              <a href="#training">Formação</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-header-hamburguer">
+          <a class="mobile-logo" href="#banner">
+            <img src="./images/profile-2.jpg" alt="" />
+          </a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            class="js-hamburguer-menu"
+          >
+            <rect x="5" y="8" width="30" height="4" rx="2" fill="#32de8a" />
+            <rect x="5" y="18" width="30" height="4" rx="2" fill="#32de8a" />
+            <rect x="5" y="28" width="30" height="4" rx="2" fill="#32de8a" />
+          </svg>
+        </div>
+      </div>
+      <div class="header__left">
+        <a href="#banner">
+          <img src="./images/profile-2.jpg" alt="" />
+        </a>
+      </div>
+      <ul class="header__right">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#experience">Experiência</a></li>
+        <li><a href="#training">Formação</a></li>
+        <li>
+          <a href="https://br.linkedin.com/in/rafael-barcarol" target="_blank"
+            >Contato</a
+          >
+        </li>
+      </ul>
+    </header>
+    <section class="banner" id="banner">
+      <div class="banner__background">
+        <video
+          src="./images/background-video.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+      </div>
+      <div class="banner__content hidden-left">
+        <div class="banner__content__left">
+          <div class="upper">
+            <div class="name">Rafael Barcarol</div>
+            <div class="role">Desenvolvedor de Software</div>
+          </div>
+          <div class="lower">
+            <a
+              class="link"
+              target="_blank"
+              rel="noopener"
+              href="./images/cvRafaelMBarcarol2025.pdf"
+              >Currículo</a
+            >
+            <a
+              class="link link--linkedin"
+              href="https://br.linkedin.com/in/rafael-barcarol"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a
+              class="link link--github"
+              href="https://github.com/rafaelbarcarol"
+              rel="noopener"
+              target="_blank"
+              >GitHub</a
+            >
+          </div>
+        </div>
+        <div class="banner__content__right">
+          <img src="./images/profile-1.jpg" alt="Foto de Rafael Barcarol" />
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <h2 class="subtitle hidden-right">Sobre Mim</h2>
+      <div class="bento-grid hidden-left">
+        <div class="item item-1">Dev desde 2023</div>
+        <div class="item item-2">
+          Meu nome é Rafael M. Barcarol, tenho 27 anos, sou Desenvolvedor de
+          Software e estudante do curso de Análise e Desenvolvimento de
+          Sistemas. <br /><br />Movido por experiências e desafios, busco
+          diariamente aprender, evoluir e contribuir!
+        </div>
+        <div class="item item-3">
+          <img src="./images/computer-1.jpg" alt="" />
+        </div>
+        <div class="item item-4">
+          <img src="./images/computer-2.jpg" alt="" />
+        </div>
+        <div class="item item-5">
+          Vivenciei uma transição de carreira: da área da Saúde para a Tech!
+        </div>
+        <div class="item item-6">Tenho 27 anos</div>
+      </div>
+    </section>
+    <section class="experience" id="experience">
+      <h2 class="experience__title hidden-right">Experência Profissional</h2>
+      <div class="experience__accordion hidden-left">
+        <div class="experience__accordion__item">
+          <div class="title js-toggle-accordion">
+            <h3 class="experience-title">
+              NOMAD INNOVATION - Desenvolvedor de Software (Mar/2024 - Atual)
+            </h3>
+            <h3 class="experience-title-mobile">
+              NOMAD INNOVATION <br />
+              Desenvolvedor de Software <br />
+              (Mar/2024 - Atual)
+            </h3>
+          </div>
+          <div class="content js-accordion-content">
+            <p>
+              Atuação na construção, manutenção e suporte em websites modernos e
+              projetos tailormade.
+              <span>Principais stacks: Laravel, jQuery, SASS.</span>
+            </p>
+          </div>
+        </div>
+        <div class="experience__accordion__item">
+          <div class="title js-toggle-accordion">
+            <h3 class="experience-title">
+              NOMAD INNOVATION - Estagiário (Setembro de 2023 - Março de 2024)
+            </h3>
+            <h3 class="experience-title-mobile">
+              NOMAD INNOVATION <br />
+              Estagiário <br />(Set/2023 - Mar/2024)
+            </h3>
+          </div>
+          <div class="content js-accordion-content">
+            <p>
+              Atuação na construção, manutenção e suporte em websites modernos e
+              projetos tailormade.
+              <span>Principais stacks: Laravel, jQuery, SASS.</span>
+            </p>
+          </div>
+        </div>
+        <div class="experience__accordion__item">
+          <div class="title js-toggle-accordion">
+            <h3 class="experience-title">
+              Profissional de Educação Física (2015 - 2023)
+            </h3>
+            <h3 class="experience-title-mobile">
+              Profissional de Educação Física <br />(2015 - 2023)
+            </h3>
+          </div>
+          <div class="content js-accordion-content">
+            <p>
+              Atuação nas áreas de treinamento físico e educação física escolar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="training" id="training">
+      <div class="training__sticky hidden-left">
+        <h2 class="training__sticky__title">Graduação</h2>
+      </div>
+      <div class="training__right hidden-right">
+        <div class="training__right__item">
+          Tecnólogo em Análise e Desenvolvimento de Sistemas
+          <br /><br />
+          Serviço Nacional de Aprendizagem Comercial (SENAC)
+          <br /><br />
+          Previsão de conclusão em julho de 2025
+        </div>
+        <div class="training__right__item">
+          Bacharelado / Licenciatura em Educação Física
+          <br /><br />
+          FSG Centro Universitário da Serra Gaúcha
+          <br /><br />
+          2015 - 2019 / 2020 - 2021
+        </div>
+      </div>
+    </section>
+    <section class="courses" id="courses">
+      <div class="courses__sticky hidden-right">
+        <h2 class="courses__sticky__title">Cursos</h2>
+      </div>
+      <div class="courses__right hidden-left">
+        <div class="courses__right__item">
+          Algoritmos e Lógica de Programação 2022
+          <br /><br />
+          Curso na Udemy - Ministrado por Nelio Alves
+          <br /><br />
+          Carga Horária: 30.5h
+        </div>
+        <div class="courses__right__item">
+          Curso English Yourself
+          <br /><br />
+          Curso Ministrado por Lilian Bittencourt
+          <br /><br />
+          Carga Horária Total: 125h
+        </div>
+        <div class="courses__right__item">
+          Curso TI 360 Start
+          <br /><br />
+          Curso Ministrado por Weslley Borges
+          <br /><br />
+          Carga Horária Realizada: 4h
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__left">
+        <p>Tecnologias utilizadas - HTML, Sass, jQuery, Git</p>
+        <div class="footer__pallete">
+          <p>Paleta de Cores</p>
+          <div class="color color-1"></div>
+          <div class="color color-2"></div>
+          <div class="color color-3"></div>
+          <div class="color color-4"></div>
+        </div>
+      </div>
+      <div class="footer__right">
+        <p>Deploy realizado no GitHub Pages</p>
+        <p>Fonte utilizada - Poppins (Google Fonts)</p>
+      </div>
+      <a class="footer__return" href="#banner">
+        <p>↑</p>
+      </a>
+    </footer>
+  </body>
+</html>

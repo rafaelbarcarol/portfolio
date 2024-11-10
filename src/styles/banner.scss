@@ -1,0 +1,158 @@
+@use "variables" as *;
+
+.banner {
+  height: 100vh;
+  background: lightblue;
+  display: flex;
+  padding: 0 5vw;
+  position: relative;
+
+  &__background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      content: "";
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 2;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      z-index: 2;
+
+      .upper {
+        .name {
+          font-size: 8rem;
+          color: $color-light-gray;
+          font-weight: bold;
+        }
+        .role {
+          font-size: 3rem;
+          color: $color-light-green;
+        }
+      }
+
+      .lower {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        .link {
+          background: $color-dark-green;
+          padding: 1rem 2rem;
+          border-radius: 5rem;
+          text-decoration: none;
+          color: $color-light-gray;
+          font-size: 2rem;
+          transition: 0.3s all ease;
+
+          &:hover {
+            letter-spacing: 2px;
+            background: $color-light-gray;
+            color: $color-dark-green;
+          }
+
+          &--linkedin {
+            background: #0e76a8;
+
+            &:hover {
+              color: #0e76a8;
+            }
+          }
+
+          &--github {
+            background: #24292e;
+
+            &:hover {
+              color: #24292e;
+            }
+          }
+        }
+      }
+    }
+
+    &__right {
+      position: absolute;
+      top: 50%;
+      right: 30%;
+      transform: translateY(-50%);
+      height: 30rem;
+      animation: moveRight 5s forwards;
+      img {
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    @keyframes moveRight {
+      0% {
+        right: 30%;
+      }
+      100% {
+        right: 0%;
+      }
+    }
+  }
+}
+
+@media (max-width: 910px) {
+  .banner {
+    height: auto;
+    padding: 20vh 0;
+    &__content {
+      flex-direction: column-reverse;
+      gap: 5rem;
+
+      &__left {
+        .upper {
+          .name {
+            font-size: 4rem;
+          }
+          .role {
+            font-size: 2rem;
+          }
+        }
+        .lower {
+          .link {
+            padding: 1rem;
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      &__right {
+        position: relative;
+        transform: translateY(0);
+        top: unset;
+        left: unset;
+      }
+    }
+  }
+}

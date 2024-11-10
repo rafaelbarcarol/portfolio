@@ -1,0 +1,64 @@
+@use "variables" as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  color: $color-light-gray;
+  font-size: 1.6rem;
+  padding: 5rem 5vw;
+
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__pallete {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    .color {
+      height: 1.6rem;
+      width: 1.6rem;
+      border-radius: 50%;
+
+      &-1 {
+        background: $color-dark-green;
+      }
+      &-2 {
+        background: $color-light-green;
+      }
+      &-3 {
+        background: $color-light-gray;
+      }
+      &-4 {
+        background: $color-dark-gray;
+      }
+    }
+  }
+
+  &__return {
+    height: 4rem;
+    width: 4rem;
+    background: $color-dark-green;
+    border-radius: 50%;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-light-gray;
+  }
+}
+
+@media (max-width: 910px) {
+  .footer {
+    padding: 3rem 5vw;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

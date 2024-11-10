@@ -1,0 +1,44 @@
+@use "header.scss";
+@use "banner.scss";
+@use "about.scss";
+@use "experience.scss";
+@use "courses.scss";
+@use "footer.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.hidden-left {
+  opacity: 0;
+  filter: blur(15px);
+  transition: 1.5s all ease;
+  transform: translateX(-100%);
+}
+
+.hidden-right {
+  opacity: 0;
+  filter: blur(15px);
+  transition: 1.5s all ease;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transform: 1.5s all ease;
+}

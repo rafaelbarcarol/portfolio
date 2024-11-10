@@ -1,0 +1,118 @@
+@use "variables" as *;
+
+.experience {
+  padding: 5rem 5vw 8rem 5vw;
+  background: $color-dark-gray;
+  &__title {
+    color: $color-light-green;
+    font-size: 4rem;
+    text-align: center;
+    padding: 3rem 0;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: "";
+      width: 40%;
+      height: 2px;
+      background: $color-light-green;
+    }
+  }
+  &__accordion {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+
+    &__item {
+      .title {
+        color: $color-light-green;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        cursor: pointer;
+        font-size: 2rem;
+        transition: 0.3s all ease;
+
+        .experience-title-mobile {
+          display: none;
+        }
+
+        &:after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          font-size: 2rem;
+          content: "+";
+          color: $color-light-green;
+          transition: 0.3s all ease;
+        }
+
+        &.active {
+          &:after {
+            content: "-";
+          }
+        }
+      }
+
+      .content {
+        opacity: 0;
+        pointer-events: none;
+        height: 0;
+        padding-top: 0;
+        transition: 0.3s all ease;
+        color: $color-light-gray;
+        font-size: 1.6rem;
+
+        p {
+          span {
+            color: $color-light-green;
+          }
+        }
+
+        &.active {
+          height: auto;
+          pointer-events: all;
+          opacity: 1;
+          padding-top: 3rem;
+        }
+      }
+
+      &:hover {
+        .title {
+          color: $color-light-gray;
+
+          &:after {
+            color: $color-light-gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 910px) {
+  .experience {
+    &__accordion {
+      &__item {
+        .title {
+          .experience-title {
+            display: none;
+          }
+          .experience-title-mobile {
+            display: block;
+            font-size: 1.5rem;
+          }
+        }
+        .content {
+          p {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
