@@ -22,9 +22,11 @@ const MyApp = (function () {
       let scrollTop = $(this).scrollTop();
 
       if (scrollTop > lastScrollTop) {
-        $(".js-desktop-header").addClass("going-down");
+        $(".js-main-header").addClass("going-down");
+      } else if (scrollTop === 0) {
+        $(".js-main-header").removeClass("going-down");
       } else {
-        $(".js-desktop-header").removeClass("going-down");
+        $(".js-main-header").removeClass("going-down");
       }
 
       lastScrollTop = scrollTop;

@@ -16,6 +16,7 @@
 .header__left {
   border-radius: 50%;
   height: 5rem;
+  width: 5rem;
 }
 .header__left img {
   height: 100%;
@@ -79,6 +80,7 @@
   .header .mobile-header .mobile-header-hamburguer .mobile-logo {
     border-radius: 50%;
     height: 5rem;
+    width: 5rem;
     display: block;
   }
   .header .mobile-header .mobile-header-hamburguer .mobile-logo img {
@@ -215,6 +217,7 @@
   right: 30%;
   transform: translateY(-50%);
   height: 30rem;
+  width: 30rem;
   animation: moveRight 5s forwards;
 }
 .banner__content__right img {
