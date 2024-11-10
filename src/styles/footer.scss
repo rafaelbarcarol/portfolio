@@ -60,5 +60,11 @@
     padding: 3rem 5vw;
     flex-direction: column;
     gap: 3rem;
+
+    &__left,
+    &__right {
+      align-items: center;
+      text-align: center;
+    }
   }
 }

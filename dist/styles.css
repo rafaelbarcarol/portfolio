@@ -603,6 +603,10 @@
     flex-direction: column;
     gap: 3rem;
   }
+  .footer__left, .footer__right {
+    align-items: center;
+    text-align: center;
+  }
 }
 * {
   box-sizing: border-box;
